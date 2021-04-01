@@ -51,18 +51,12 @@ namespace HospitalService1
         [OperationContract]
         string bookAppointment(BookApp bapp);
 
-        //[OperationContract]
-        //string bookAppointment(bookApp ba);
 
 
         // TODO: Add your service operations here
     }
 
-    /*[DataContract]
-    public class bookApp
-    {
-        [DataMember]
-    }*/
+
     [DataContract]
     public class BookApp
     {
@@ -188,13 +182,6 @@ namespace HospitalService1
         string dexperience = string.Empty;
         string dspeciality = string.Empty;
 
-        /*[DataMember]
-        public string d_id
-        {
-            get { return dId; }
-            set { dId = value; }
-        }
-        */
 
         [DataMember]
         public string d_name 
