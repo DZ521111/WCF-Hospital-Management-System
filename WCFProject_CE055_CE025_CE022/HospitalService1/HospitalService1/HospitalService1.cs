@@ -10,14 +10,10 @@ using System.Configuration;
 
 namespace HospitalService1
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
+    
     public class HospitalService1 : IHospitalService1
     {
-        /*public string bookAppointment(bookApp ba)
-        {
-            string msg = "";
-            return (msg);
-        }*/
+      
 
         public string bookAppointment(BookApp bapp)
         {
@@ -64,10 +60,9 @@ namespace HospitalService1
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\soc\HospitalService1\HostHospital\HPDB.mdf;Integrated Security=True");
             con.Open();
             SqlCommand cmd = new SqlCommand("Select * from Patient", con);
-            //SqlDataAdapter da = new SqlDataAdapter(cmd);
+
             cmd.CommandType = CommandType.Text;
-            //DataTable dt = new DataTable("PTable");
-            //da.Fill(dt);
+
             SqlDataReader dr;
             dr = cmd.ExecuteReader();
             while (dr.Read())
